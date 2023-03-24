@@ -44,7 +44,8 @@ function crafting_formula_main(e)
 				-- Destroy(e) from world ??
 				Hide(e)
 				CollisionOff(e)
-				SetEntityCollected(e,1)				
+				SetEntityCollected(e,1)
+				PromptDuration("Crafting Formula added to the Crafting Formula Inventory",3000)				
 			end
 		end
 		if crafting_formula[e].pickup_style == 2 then
@@ -61,6 +62,7 @@ function crafting_formula_main(e)
 						Hide(e)
 						CollisionOff(e)
 						SetEntityCollected(e,1)
+						PromptDuration("Crafting Formula added to the Crafting Formula Inventory",3000)
 					end
 				end
 			end
@@ -68,7 +70,6 @@ function crafting_formula_main(e)
 	end
 	
 	if GetEntityCollected(e) == 1 then
-		PromptDuration("Crafting Formula added to the Crafting Formula Inventory",3000)
 		ResetPosition(e,g_PlayerX,g_PlayerY,g_PlayerZ)		
 	end
 	
